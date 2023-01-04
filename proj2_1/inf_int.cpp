@@ -118,7 +118,7 @@ bool operator!=(const inf_int& a, const inf_int& b)
 
 bool operator>(const inf_int& a, const inf_int& b)
 {
-	if (a.thesign == b.thesign) { //ºÎÈ£°¡ °°À» °æ¿ì
+	if (a.thesign == b.thesign) { //ë¶€í˜¸ê°€ ê°™ì„ ê²½ìš°
 		if (a.length != b.length) {
 			if (a.length > b.length)
 				return true;
@@ -133,7 +133,7 @@ bool operator>(const inf_int& a, const inf_int& b)
 				return false;
 		}
 	}
-	else        // ºÎÈ£°¡ ´Ù¸¦ °æ¿ì
+	else        // ë¶€í˜¸ê°€ ë‹¤ë¥¼ ê²½ìš°
 		return (a.thesign == true);
 }
 
