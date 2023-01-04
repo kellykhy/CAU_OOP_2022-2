@@ -1,0 +1,5 @@
+           Name          Student ID                     Dept     Birth Year            Tel
+      Kelly Kim          2020000000                   Stats.           1999    01022223333
+      Jamy Park          2018333399              Archaeology           1997    01029338888
+    Evan Summit          2016200044              Mathematics           1995    01029332222
+       Jeff Kim          2015222233                      Art           1994    01099998888
