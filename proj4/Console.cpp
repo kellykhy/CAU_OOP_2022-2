@@ -1,6 +1,6 @@
 #include "console.h"
 
-//ÄÜ¼Ö ³»ºÎÀÇ Æ¯Á¤ À§Ä¡·Î Ä¿¼­¸¦ ÀÌµ¿½ÃÅ°´Â ÇÔ¼ö ÀÔ´Ï´Ù.
+//ì½˜ì†” ë‚´ë¶€ì˜ íŠ¹ì • ìœ„ì¹˜ë¡œ ì»¤ì„œë¥¼ ì´ë™ì‹œí‚¤ëŠ” í•¨ìˆ˜ ì…ë‹ˆë‹¤.
 void Console::gotoxy(int x, int y) {
 	COORD Pos;
 	Pos.X = x;
@@ -28,7 +28,7 @@ int Console::keyControl() {
 	}
 }
 
-//ÄÜ¼Ö ¼¼ÆÃ
+//ì½˜ì†” ì„¸íŒ…
 void Console::SetConsoleView() {
 	system("mode con:cols=60 lines=20");
 	system("title [HangManGame] by.Team10");
