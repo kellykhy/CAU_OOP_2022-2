@@ -91,10 +91,10 @@ bool CSphere::hitBy(CSphere& ball)
 
 	// theta1 = angle between vector of center-to-center and x-axis
 	double theta1 = acos(sqrt(pow(this->center_x - ball.center_x, 2))
-		/ sqrt(pow(this->center_x - ball.center_x, 2) + pow(this->center_z - ball.center_z, 2)));      // ±âº» 1 »çºÐ¸é
-	if (this->center_z - ball.center_z <= 0 && this->center_x - ball.center_x >= 0) { theta1 = -theta1; }   //4 »çºÐ¸é
-	if (this->center_z - ball.center_z >= 0 && this->center_x - ball.center_x <= 0) { theta1 = PI - theta1; } //2 »çºÐ¸é
-	if (this->center_z - ball.center_z <= 0 && this->center_x - ball.center_x <= 0) { theta1 = PI + theta1; } // 3 »çºÐ¸é
+		/ sqrt(pow(this->center_x - ball.center_x, 2) + pow(this->center_z - ball.center_z, 2)));      // ê¸°ë³¸ 1 ì‚¬ë¶„ë©´
+	if (this->center_z - ball.center_z <= 0 && this->center_x - ball.center_x >= 0) { theta1 = -theta1; }   //4 ì‚¬ë¶„ë©´
+	if (this->center_z - ball.center_z >= 0 && this->center_x - ball.center_x <= 0) { theta1 = PI - theta1; } //2 ì‚¬ë¶„ë©´
+	if (this->center_z - ball.center_z <= 0 && this->center_x - ball.center_x <= 0) { theta1 = PI + theta1; } // 3 ì‚¬ë¶„ë©´
 
 	// theta2 = angle between velocity before collision and x-axis
 	double power_s = sqrt(pow(ball.getVelocity_X() - this->getVelocity_X(), 2) + pow(ball.getVelocity_Z() - this->getVelocity_Z(), 2));
@@ -143,7 +143,7 @@ void CSphere::ballUpdate(float timeDiff)
 	if (rate < 0)
 		rate = 0;
 	this->setPower(getVelocity_X() * rate, getVelocity_Z() * rate);
-}// ½Ã°£¿¡ µû¸¥ º¼ÀÇ ¿òÁ÷ÀÓ update
+}// ì‹œê°„ì— ë”°ë¥¸ ë³¼ì˜ ì›€ì§ìž„ update
 
 double CSphere::getVelocity_X() { return this->m_velocity_x; }
 double CSphere::getVelocity_Z() { return this->m_velocity_z; }
