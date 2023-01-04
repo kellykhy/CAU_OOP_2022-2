@@ -6,7 +6,7 @@
 #include <conio.h>
 #include <Windows.h>
 #include <vector>	// C++ vectror
-#include <fstream>	// C++ ÆÄÀÏÀÔÃâ·Â
+#include <fstream>	// C++ Ã†Ã„Ã€ÃÃ€Ã”ÃƒÃ¢Â·Ã‚
 
 #define UP 0
 #define DOWN 1
