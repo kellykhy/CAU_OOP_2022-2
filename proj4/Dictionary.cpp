@@ -4,7 +4,7 @@ void Dictionary::SetDictionary(vector<string>& strArr, int category) {
 	static const string FRUIT[4] = { "apple", "banana", "grape","watermelon" };
 	static const string ANIMAL[4] = { "dog", "elephant", "monkey", "turtle" };
 	static const string COUNTRY[4] = { "brazil", "australia", "canada", "germany" };
-	static const string OOP_CONCEPT[4] = { "abstraction", "encapsulation", "inheritance", "polymorphism" };	// Ãß»óÈ­, Ä¸½¶È­, »ó¼Ó, ´ÙÇü¼º
+	static const string OOP_CONCEPT[4] = { "abstraction", "encapsulation", "inheritance", "polymorphism" };	// ì¶”ìƒí™”, ìº¡ìŠí™”, ìƒì†, ë‹¤í˜•ì„±
 
 	const string* str[4] = { FRUIT, ANIMAL, COUNTRY, OOP_CONCEPT };
 
@@ -13,7 +13,7 @@ void Dictionary::SetDictionary(vector<string>& strArr, int category) {
 	}
 }
 
-// ´Ü¾î ÈùÆ®: ¹®Àå
+// ë‹¨ì–´ íŒíŠ¸: ë¬¸ì¥
 void Dictionary::StatementHint(string strOriginal) {
 	// FRUIT
 	if (strOriginal == "apple")
@@ -53,8 +53,8 @@ void Dictionary::StatementHint(string strOriginal) {
 		printf("One name(variable, function, class) may have many different meanings");
 }
 
-// ´Ü¾î ÈùÆ®: ¾ËÆÄºª
-// ¾ËÆÄºªÀÇ ºóµµ ¼ö°¡ °°´Ù¸é, »çÀü ¼ø¼­·Î °¡Àå ¾ÕÂÊÀÇ ¾ËÆÄºªÀÌ ÈùÆ®·Î ÁÖ¾îÁü
+// ë‹¨ì–´ íŒíŠ¸: ì•ŒíŒŒë²³
+// ì•ŒíŒŒë²³ì˜ ë¹ˆë„ ìˆ˜ê°€ ê°™ë‹¤ë©´, ì‚¬ì „ ìˆœì„œë¡œ ê°€ì¥ ì•ìª½ì˜ ì•ŒíŒŒë²³ì´ íŒíŠ¸ë¡œ ì£¼ì–´ì§
 void Dictionary::AlphabetHint(string strOriginal) {
 	int cnt[26] = { 0 };
 	int max_index = -1;
