@@ -17,7 +17,7 @@
 
 using namespace std;
 
-//°ÔÀÓ½ÃÀÛ È­¸é
+//ê²Œì„ì‹œì‘ í™”ë©´
 int DrawReadyGame() {
 	system("cls");
 
@@ -38,13 +38,13 @@ int DrawReadyGame() {
 	int x = 20; int y = 13;
 
 	Console::gotoxy(x, y);
-	cout << "¢Ñ  °Ô ÀÓ ½Ã ÀÛ";
+	cout << "â˜  ê²Œ ì„ ì‹œ ì‘";
 	Console::gotoxy(x, y + 1);
-	cout << "    °Ô ÀÓ ¼³ ¸í";
+	cout << "    ê²Œ ì„ ì„¤ ëª…";
 	Console::gotoxy(x, y + 2);
-	cout << "    °Ô ÀÓ Á¾ ·á";
+	cout << "    ê²Œ ì„ ì¢… ë£Œ";
 
-	//¸Ş´º¼±ÅÃ, È­»ìÇ¥ Ç¥½Ã
+	//ë©”ë‰´ì„ íƒ, í™”ì‚´í‘œ í‘œì‹œ
 	while (1) {
 		int n = Console::keyControl();
 		switch (n) {
@@ -53,7 +53,7 @@ int DrawReadyGame() {
 				Console::gotoxy(x, y);
 				printf("   ");
 				Console::gotoxy(x, --y);
-				printf("¢Ñ");
+				printf("â˜");
 			}
 			break;
 		}
@@ -62,18 +62,18 @@ int DrawReadyGame() {
 				Console::gotoxy(x, y);
 				printf("   ");
 				Console::gotoxy(x, ++y);
-				printf("¢Ñ");
+				printf("â˜");
 			}
 			break;
 		}
 		case SUBMIT: {
-			return y - 13; //°ÔÀÓ½ÃÀÛ=0 °ÔÀÓÁ¤º¸=1 °ÔÀÓÁ¾·á=2
+			return y - 13; //ê²Œì„ì‹œì‘=0 ê²Œì„ì •ë³´=1 ê²Œì„ì¢…ë£Œ=2
 		}
 		}
 	}
 }
 
-//Ä«Å×°í¸®¼±ÅÃ È­¸é
+//ì¹´í…Œê³ ë¦¬ì„ íƒ í™”ë©´
 int DrawCategory() {
 	system("cls");
 
@@ -83,7 +83,7 @@ int DrawCategory() {
 	int x = 22; int y = 10;
 
 	Console::gotoxy(x, y);
-	cout << "¢Ñ  FRUIT";
+	cout << "â˜  FRUIT";
 	Console::gotoxy(x, y + 1);
 	cout << "    ANIMAL";
 	Console::gotoxy(x, y + 2);
@@ -91,7 +91,7 @@ int DrawCategory() {
 	Console::gotoxy(x, y + 3);
 	cout << "    OOP CONCEPT";
 
-	//¸Ş´º ¼±ÅÃ, È­»ìÇ¥ Ç¥½Ã
+	//ë©”ë‰´ ì„ íƒ, í™”ì‚´í‘œ í‘œì‹œ
 	while (1) {
 		int n = Console::keyControl();
 		switch (n) {
@@ -100,7 +100,7 @@ int DrawCategory() {
 				Console::gotoxy(x, y);
 				printf("   ");
 				Console::gotoxy(x, --y);
-				printf("¢Ñ");
+				printf("â˜");
 			}
 			break;
 		}
@@ -109,7 +109,7 @@ int DrawCategory() {
 				Console::gotoxy(x, y);
 				printf("   ");
 				Console::gotoxy(x, ++y);
-				printf("¢Ñ");
+				printf("â˜");
 			}
 			break;
 		}
@@ -121,7 +121,7 @@ int DrawCategory() {
 
 }
 
-//°ÔÀÓÈ­¸é
+//ê²Œì„í™”ë©´
 void DrawStartGame(int life, int score, int correct, vector<string>& pastWord, int warning, int hint, string strOriginal, int category) {
 	system("cls");
 
@@ -130,17 +130,17 @@ void DrawStartGame(int life, int score, int correct, vector<string>& pastWord, i
 	Console::gotoxy(10, 1);
 	for (int i = 0; i < (life + 1); i++) {
 		if (i % 5 == 4) {
-			printf("¢¾");
+			printf("â™¥");
 		}
 		else {
-			printf("¢¾");
+			printf("â™¥");
 		}
 	}
 	Console::gotoxy(10, 3);
-	cout << "TotalScore = " << score;	//°ÔÀÓ ÇÕ»ê Á¡¼ö
+	cout << "TotalScore = " << score;	//ê²Œì„ í•©ì‚° ì ìˆ˜
 
 	Console::gotoxy(30, 3);
-	cout << "Correct = " << correct;	//¸ÂÃá ´Ü¾î °³¼ö
+	cout << "Correct = " << correct;	//ë§ì¶˜ ë‹¨ì–´ ê°œìˆ˜
 
 	Console::gotoxy(10, 8);
 	cout << "History = ";
@@ -151,12 +151,12 @@ void DrawStartGame(int life, int score, int correct, vector<string>& pastWord, i
 	Console::gotoxy(10, 11);
 	cout << "Input = ";
 
-	Console::gotoxy(1, 13);				//°æ°í¹®
+	Console::gotoxy(1, 13);				//ê²½ê³ ë¬¸
 	if (warning == 1) {
-		cout << "¡Ø Please enter one letter at a time or the whole word ¡Ø";
+		cout << "â€» Please enter one letter at a time or the whole word â€»";
 	}
 
-	//ÇöÀç ÁøÇàÁßÀÎ °ÔÀÓÀÇ Ä«Å×°í¸®¸¦ º¸¿©ÁØ´Ù
+	//í˜„ì¬ ì§„í–‰ì¤‘ì¸ ê²Œì„ì˜ ì¹´í…Œê³ ë¦¬ë¥¼ ë³´ì—¬ì¤€ë‹¤
 	Console::gotoxy(10, 14);
 	if (category == 0) {
 		cout << "Category : FRUIT";
@@ -172,20 +172,20 @@ void DrawStartGame(int life, int score, int correct, vector<string>& pastWord, i
 	}
 
 	Console::gotoxy(10, 15);
-	cout << "¢Ñ  Type 'hint' to return to the menu";
+	cout << "â˜  Type 'hint' to return to the menu";
 	Console::gotoxy(10, 16);
-	cout << "¢Ñ  Type 'quit' to return to the menu";
+	cout << "â˜  Type 'quit' to return to the menu";
 
 	Console::gotoxy(10, 18);
 	if (hint == 1) {
-		dic.StatementHint(strOriginal);	//¹®Àå ÈùÆ® Ãâ·Â
+		dic.StatementHint(strOriginal);	//ë¬¸ì¥ íŒíŠ¸ ì¶œë ¥
 	}
 	else if (hint == 2) {
-		dic.AlphabetHint(strOriginal);	//¾ËÆÄºª ÈùÆ® Ãâ·Â
+		dic.AlphabetHint(strOriginal);	//ì•ŒíŒŒë²³ íŒíŠ¸ ì¶œë ¥
 	}
 }
 
-//°ÔÀÓÁ¤º¸ È­¸é
+//ê²Œì„ì •ë³´ í™”ë©´
 void GameInfo() {
 	system("cls");
 
@@ -206,7 +206,7 @@ void GameInfo() {
 
 
 	Console::gotoxy(35, 13);
-	cout << "¢Ñ  next page (1/2)";
+	cout << "â˜  next page (1/2)";
 
 	//pg 2
 	while (1) {
@@ -214,7 +214,7 @@ void GameInfo() {
 			system("cls");
 
 			Console::gotoxy(5, 2);
-			cout << "Life? ¢¾";
+			cout << "Life? â™¥";
 			Console::gotoxy(5, 3);
 			cout << " Chance to type answer.";
 
@@ -231,7 +231,7 @@ void GameInfo() {
 			cout << " History of your input answers.";
 
 			Console::gotoxy(35, 13);
-			cout << "¢Ñ  go back to MENU";
+			cout << "â˜  go back to MENU";
 
 			while (1) {
 				if (Console::keyControl() == SUBMIT) {
@@ -243,7 +243,7 @@ void GameInfo() {
 	}
 }
 
-//°ÔÀÓ ÇÔ¼ö
+//ê²Œì„ í•¨ìˆ˜
 void StartGame(int category) {
 
 	int score = 0;
@@ -264,7 +264,7 @@ void StartGame(int category) {
 		num = rand() % static_cast<int>(strArr.size());
 
 		string strQuestion;
-		const string strOriginal = strArr[num];	//´Ü¾î°¡ ¸Â´ÂÁö Á¤´äÈ®ÀÎ¿ëÀ¸·Î ÀúÀå
+		const string strOriginal = strArr[num];	//ë‹¨ì–´ê°€ ë§ëŠ”ì§€ ì •ë‹µí™•ì¸ìš©ìœ¼ë¡œ ì €ì¥
 		const int originLen = static_cast<int>(strOriginal.length());
 
 		//init
@@ -280,7 +280,7 @@ void StartGame(int category) {
 
 			DrawStartGame(life, score, correct, pastWord, warning, hint, strOriginal, category);
 
-			//¹®Á¦
+			//ë¬¸ì œ
 			Console::gotoxy(10, 5);
 			for (int i = 0; i < originLen; ++i) {
 				cout << strQuestion[i] << " ";
@@ -292,7 +292,7 @@ void StartGame(int category) {
 			string strInput;
 			cin >> strInput;
 
-			//quit ÀÔ·Â -> ¸Ş´º·Î µ¹¾Æ°£´Ù.
+			//quit ì…ë ¥ -> ë©”ë‰´ë¡œ ëŒì•„ê°„ë‹¤.
 			if (strInput == "quit") {
 				hint = 0;
 				return;
@@ -300,7 +300,7 @@ void StartGame(int category) {
 
 			pastWord.push_back(strInput);
 
-			//input : ¾ËÆÄºª
+			//input : ì•ŒíŒŒë²³
 			if (strInput.length() == 1) {
 				for (int i = 0; i < originLen; ++i) {
 					if (strOriginal[i] == strInput[0]) {
@@ -309,23 +309,23 @@ void StartGame(int category) {
 						cout << count << endl;
 					}
 				}
-				// ¾ËÆÄºª ÇÏ³ª¾¿ ÀÔ·ÂÇÏ¿© ´Ü¾î¸¦ ¸ÂÃâ °æ¿ì -> Á¡¼ö 5Á¡ Ä«¿îÆ®ÇÏ°í ´ÙÀ½´Ü¾î·Î ³Ñ¾î°¨
+				// ì•ŒíŒŒë²³ í•˜ë‚˜ì”© ì…ë ¥í•˜ì—¬ ë‹¨ì–´ë¥¼ ë§ì¶œ ê²½ìš° -> ì ìˆ˜ 5ì  ì¹´ìš´íŠ¸í•˜ê³  ë‹¤ìŒë‹¨ì–´ë¡œ ë„˜ì–´ê°
 				if (count == originLen) {
-					if (hint == 0) {		//hint ¹Ì»ç¿ë -> 5Á¡ Áõ°¡
+					if (hint == 0) {		//hint ë¯¸ì‚¬ìš© -> 5ì  ì¦ê°€
 						score += 5;
 						correct += 1;
 						pastWord.clear();	//init
 						break;
 					}
 					else if (hint == 1) {
-						score += 2;			//hint1(¹®ÀåÈùÆ®) »ç¿ë -> 2Á¡ Áõ°¡
+						score += 2;			//hint1(ë¬¸ì¥íŒíŠ¸) ì‚¬ìš© -> 2ì  ì¦ê°€
 						correct += 1;
 						hint = 0;			//init
 						pastWord.clear();
 						break;
 					}
 					else if (hint == 2) {
-						score += 3;			//hint2(¾ËÆÄºªÈùÆ®) »ç¿ë -> 3Á¡ Áõ°¡
+						score += 3;			//hint2(ì•ŒíŒŒë²³íŒíŠ¸) ì‚¬ìš© -> 3ì  ì¦ê°€
 						correct += 1;
 						hint = 0;			//init
 						pastWord.clear();
@@ -333,7 +333,7 @@ void StartGame(int category) {
 					}
 				}
 			}
-			//input : ´Ü¾î
+			//input : ë‹¨ì–´
 			else if (strInput.length() > 1) {
 				if (strOriginal == strInput) {
 					if (hint == 0) {
@@ -360,12 +360,12 @@ void StartGame(int category) {
 				else {
 					warning = 1;
 				}
-				if (strInput == "hint") {	//hint´Â ·£´ıÀ¸·Î ¹Ş´Â´Ù.
+				if (strInput == "hint") {	//hintëŠ” ëœë¤ìœ¼ë¡œ ë°›ëŠ”ë‹¤.
 					hint = rand() % 2 + 1;
 				}
 			}
 
-			if (hint == 0) {	//hint´Â life¸¦ ±ğÁö ¾Ê´Â´Ù.
+			if (hint == 0) {	//hintëŠ” lifeë¥¼ ê¹ì§€ ì•ŠëŠ”ë‹¤.
 				life -= 1;
 			}
 
@@ -384,7 +384,7 @@ void StartGame(int category) {
 
 
 
-//¸ŞÀÎ ÇÔ¼ö
+//ë©”ì¸ í•¨ìˆ˜
 int main(void) {
 
 	Console::SetConsoleView();
