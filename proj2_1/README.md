@@ -1,5 +1,4 @@
-# Problem1
-Complete implementing inf_int class that represents infinite precision integer and its operations. The
+**Problem1.** Complete implementing inf_int class that represents infinite precision integer and its operations. The
 specification of inf_int is provided to you in "inf_int.h". You should add its implementation in
 "inf_int.cpp". Test the correctness of your implementation by writing "main.cpp". "inf_int.h" and an
 example of "main.cpp" are downloadable from our class website. After compilation, your code should generate
